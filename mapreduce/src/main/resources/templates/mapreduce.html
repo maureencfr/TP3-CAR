@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MapReduce</title>
+</head>
+<body>
+<h1>TP3 AKKA</h1>
+<hr />
+<h2>Initialisation des acteurs AKKA</h2>
+<form action="/init" method="post">
+<input TYPE=SUBMIT VALUE="Envoi">
+</form>
+<hr />
+<h2>Choix du fichier</h2>
+<form action="/process" method="post">
+<INPUT TYPE=SUBMIT VALUE="Choisir un fichier">
+<INPUT TYPE=SUBMIT VALUE="Envoi">
+</form>
+<hr />
+<h2>Comptage des mots</h2>
+<form action="/count/${word}" method="post">
+    Mot : <input type="text" name="word" required>
+    <input type="submit" value="Ajouter">
+</form>
+<p>Réponse en nombre d'occurences :</p>
+</body>
+</html>
