@@ -13,16 +13,16 @@
 </form>
 <hr />
 <h2>Choix du fichier</h2>
-<form action="/process" method="post">
-<INPUT TYPE=SUBMIT VALUE="Choisir un fichier">
+<form action="/process" method="post" enctype="multipart/form-data">
+<INPUT TYPE=FILE name="file" required>
 <INPUT TYPE=SUBMIT VALUE="Envoi">
 </form>
 <hr />
 <h2>Comptage des mots</h2>
-<form action="/count/${word}" method="post">
+<form action="/count" method="post">
     Mot : <input type="text" name="word" required>
     <input type="submit" value="Ajouter">
 </form>
-<p>Réponse en nombre d'occurences :</p>
+<p th:text="'Réponse en nombre d\'occurrences : ' + ${occurrences}"></p>
 </body>
 </html>
