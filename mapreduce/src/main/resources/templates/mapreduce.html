@@ -23,6 +23,6 @@
     Mot : <input type="text" name="word" required>
     <input type="submit" value="Ajouter">
 </form>
-<p th:text="'Réponse en nombre d\'occurrences : ' + ${occurrences}"></p>
+<p th:text="'Réponse en nombre d\'occurrences du mot ' +${word} + ' : ' + ${occurrences}"></p>
 </body>
 </html>
